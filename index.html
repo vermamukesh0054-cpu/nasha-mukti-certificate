@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>नशा मुक्ति शपथ पत्र — सर्टिफिकेट जनरेटर</title>
+  <meta name="description" content="नाम और फोटो डालकर नशा मुक्ति शपथ पत्र जनरेट करें।">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="panel">
+      <h1>नशा मुक्ति शपथ पत्र</h1>
+      <p class="sub">अपना नाम और फोटो डालें और सर्टिफिकेट डाउनलोड करें।</p>
+
+      <label for="name">नाम</label>
+      <input id="name" type="text" maxlength="60" placeholder="अपना पूरा नाम लिखें" autocomplete="name">
+
+      <label for="photo">फोटो</label>
+      <input id="photo" type="file" accept="image/*">
+
+      <div class="actions">
+        <button id="generate" class="primary">सर्टिफिकेट बनाएं</button>
+        <button id="downloadPng" disabled>PNG डाउनलोड</button>
+        <button id="downloadPdf" disabled>PDF डाउनलोड</button>
+      </div>
+
+      <p id="status" class="status"></p>
+      <p class="note">आपकी फोटो इस वेबसाइट से किसी सर्वर पर अपलोड नहीं होती। सर्टिफिकेट आपके डिवाइस में ही तैयार होता है।</p>
+    </section>
+
+    <section class="preview-card">
+      <h2>Preview</h2>
+      <div class="canvas-wrap">
+        <canvas id="certificate" width="1536" height="1024"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>युवा समिति किशनपुरा उत्तराधा</footer>
+
+  <!-- PDF बनाने के लिए jsPDF CDN; PNG डाउनलोड इसके बिना भी काम करता है। -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
